@@ -1,24 +1,15 @@
-function test_prime(n)
-{
-
-  if (n===1)
-  {
-    return false;
+const isPrime = (arr) => {
+  let num = arr[0];
+  if(num<2){
+      console.log(`${num} number is prime`);
+      return;
   }
-  else if(n === 2)
-  {
-    return true;
-  }else
-  {
-    for(var x = 2; x < n; x++)
-    {
-      if(n % x === 0)
-      {
-        return false;
+  for(let i=2; i<num; i++) {
+      if(num%i===0){
+          console.log(`${num} number is not prime`);
+          return;
       }
-    }
-    return true;  
   }
+  console.log(`${num} number is prime`);
+  return;
 }
-
-console.log(test_prime(37));
